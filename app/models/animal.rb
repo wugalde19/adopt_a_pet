@@ -3,4 +3,5 @@ class Animal < ApplicationRecord
 
   validates :age, :color, :weight, :species, presence: true
 
+  has_many :pets
 end
