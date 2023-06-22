@@ -1,6 +1,8 @@
 class Pet < ApplicationRecord
   self.table_name = 'pet'
 
+  scope :older_than_five, -> { joins(:animal).where('age > 5') }
+
   validates :name, presence: true
 
   belongs_to :owner
