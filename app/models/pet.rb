@@ -3,4 +3,7 @@ class Pet < ApplicationRecord
 
   validates :name, presence: true
 
+  belongs_to :owner
+  belongs_to :animal
+
 end
