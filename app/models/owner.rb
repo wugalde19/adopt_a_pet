@@ -7,4 +7,12 @@ class Owner < ApplicationRecord
 
   has_many :pets, dependent: :destroy
 
+
+  def pets_adopted_count
+    pets.count
+  end
+
+  def pets_names
+    pets.map(&:name).join(', ')
+  end
 end
