@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/about", to: "home#about"
 
   resources :owners, only: [:index, :show]
+
+  resources :animals
 end
